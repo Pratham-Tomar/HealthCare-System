@@ -1,0 +1,61 @@
+{
+  "folders": [
+    {
+      "name": "Frontend",
+      "path": "Frontend"
+    },
+    {
+      "name": "Backend - Eureka-Server",
+      "path": "Backend/Eureka-Server"
+    },
+    {
+      "name": "Backend - GatewayMS",
+      "path": "Backend/GatewayMS"
+    },
+    {
+      "name": "Backend - UserMS",
+      "path": "Backend/UserMS"
+    },
+    {
+      "name": "Backend - ProfileMS",
+      "path": "Backend/ProfileMS"
+    },
+    {
+      "name": "Backend - Appointment",
+      "path": "Backend/Appointment"
+    },
+    {
+      "name": "Backend - PharmacyMS",
+      "path": "Backend/PharmacyMS"
+    },
+    {
+      "name": "Backend - media",
+      "path": "Backend/media"
+    }
+  ],
+  "settings": {
+    "java.configuration.detectJdksAtStart": true
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Start HMS Frontend",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": ["start"],
+        "cwd": "${workspaceFolder:Frontend}",
+        "env": {
+          "REACT_APP_API_URL": "http://localhost:9000"
+        },
+        "console": "integratedTerminal",
+        "serverReadyAction": {
+          "action": "openExternally",
+          "pattern": "Local:\\s+(https?://\\S+)",
+          "uriFormat": "%s"
+        }
+      }
+    ]
+  }
+}
